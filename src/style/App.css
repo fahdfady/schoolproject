@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
 @import url("reset.css");
 /*==================== VARIABLES CSS ====================*/
 :root {
   --main-color: #fff;
-  --primary-color: #FFB830;
-  --secondary-color-faded: rgba(139, 107, 209, 0.6);
-  --secondary-color: #3DB2FF;
+  --primary-color: #3DB2FF;
+  --primary-color-faded: rgba(139, 107, 209, 0.6);
+  --secondary-color: #FFB830;
   --text-color: #000;
   --bg-color: #f0f0f0;
   --border-radius: 6px;
   --shadow-default: 0 0 5px 3px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 0 5px 3px var(--secondary-color-faded);
+  --shadow-hover: 0 0 5px 3px var(--primary-color-faded);
 }
 
 ::-moz-selection {
@@ -32,7 +33,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: 4px;
 }
 
@@ -44,6 +45,10 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+}
+
+a {
+  outline: none;
 }
 
 /* Font size for large devices */
@@ -81,7 +86,7 @@ header a {
 header nav.navbar {
   background: #f8f8f8;
   width: 100%;
-  padding: 0px 20px;
+  padding: 0px 60px;
   height: 50px;
   position: fixed;
   top: 0;
@@ -101,11 +106,11 @@ header nav.navbar {
 }
 
 header nav.navbar .logo {
-  font-size: var(--font-size-title);
+  font-size: 24px;
   font-weight: bold;
   text-transform: capitalize;
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 header nav.navbar .logo:hover {
@@ -116,28 +121,54 @@ header nav.navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0px 8px;
+  gap: 0px 14px;
+}
+
+header nav.navbar ul li:hover a::before {
+  width: 100%;
+  background-color: #0071dc;
+  left: 0;
+  right: auto;
 }
 
 header nav.navbar ul li a {
+  font-size: 18px;
   text-decoration: none;
+  position: relative;
   color: var(--text-color);
 }
 
 header nav.navbar ul li a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+header nav.navbar ul li a::before {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: currentColor;
+  -webkit-transition: all 0.18s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.18s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 main section.banner {
+  background: #f8f8f8;
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   position: relative;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url("../assets/pattern-curve.svg");
+  background-position: bottom left;
 }
 
 main section.banner .shape-wrapper {
   position: absolute;
-  z-index: -5;
+  z-index: 0;
   width: 100%;
   height: 100%;
 }
@@ -159,7 +190,7 @@ main section.banner .shape-wrapper img.blob1 {
   top: auto;
   left: auto;
   right: 160px;
-  bottom: 10%;
+  bottom: 8%;
 }
 
 main section.banner .shape-wrapper img.blob2 {
@@ -167,6 +198,12 @@ main section.banner .shape-wrapper img.blob2 {
   right: auto;
   left: 160px;
   bottom: auto;
+}
+
+main section.banner .shape-wrapper img.blob3 {
+  top: auto;
+  bottom: 30%;
+  right: 20px;
 }
 
 main section.banner .layer {
@@ -194,18 +231,107 @@ main section.banner .banner-title {
 }
 
 main section.banner .banner-title span {
-  color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+main section.banner img.banner-image01,
+main section.banner img.banner-image02,
+main section.banner img.banner-image03 {
+  position: absolute;
+  z-index: 10;
+  -webkit-box-shadow: var(--shadow-default);
+          box-shadow: var(--shadow-default);
 }
 
 main section.banner img.banner-image01 {
-  position: absolute;
-  z-index: 0;
   width: 12vw;
   max-width: 12vw;
   top: 38%;
   left: 6%;
   border-radius: 40px 10px 40px 10px;
-  -webkit-box-shadow: var(--shadow-default);
-          box-shadow: var(--shadow-default);
+}
+
+main section.banner img.banner-image02 {
+  width: 12vw;
+  max-width: 12vw;
+  top: 20%;
+  right: 6%;
+  border-radius: 40px 10px 40px 10px;
+}
+
+main section.banner img.banner-image03 {
+  width: 12vw;
+  max-width: 12vw;
+  bottom: 3%;
+  left: 17%;
+  border-radius: 40px 10px 40px 10px;
+}
+
+.phases {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 22px;
+  padding: 18px 0px;
+}
+
+.phases .phase {
+  border: 1px solid #333;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  padding: 20px 10px;
+  text-align: center;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+  width: calc(40% - 10px);
+}
+
+.phases .phase * {
+  -webkit-transition: inherit;
+  transition: inherit;
+  color: #898f9d;
+}
+
+.phases .phase .phase-title {
+  font-size: 28px;
+  color: var(--primary-color);
+}
+
+.phases .phase .icon {
+  font-size: 74px;
+}
+
+.phases .phase .phase-description {
+  font-size: 14px;
+}
+
+.phases .phase:hover * {
+  color: var(--primary-color);
+}
+
+.phases .phase:hover .phase-description {
+  color: #0f0e0d;
 }
 /*# sourceMappingURL=app.css.map */

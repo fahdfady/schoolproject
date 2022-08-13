@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
 @import url("reset.css");
 
 /*==================== VARIABLES CSS ====================*/
@@ -21,14 +22,14 @@
 
 :root {
     --main-color: #fff;
-    --primary-color: #FFB830;
-    --secondary-color-faded: rgba(139, 107, 209, 0.6);
-    --secondary-color: #3DB2FF;
+    --primary-color: #3DB2FF;
+    --primary-color-faded: rgba(139, 107, 209, 0.6);
+    --secondary-color: #FFB830;
     --text-color: #000;
     --bg-color: #f0f0f0;
     --border-radius: 6px;
     --shadow-default: 0 0 5px 3px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 0 5px 3px var(--secondary-color-faded);
+    --shadow-hover: 0 0 5px 3px var(--primary-color-faded);
 }
 
 ::selection {
@@ -46,7 +47,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 4px;
     // border: 1px solid rgb(35, 21, 44)
 }
@@ -61,6 +62,9 @@
     scroll-behavior: smooth;
 }
 
+a {
+    outline: none;
+}
 
 /* Font size for large devices */
 
@@ -88,9 +92,8 @@ header {
     nav.navbar {
         background: #f8f8f8;
         width: 100%;
-        padding: 0px 20px;
+        padding: 0px 60px;
         height: 50px;
-        // margin-bottom: 50px;
         position: fixed;
         top: 0;
         left: 0;
@@ -101,12 +104,12 @@ header {
         border-bottom: 1px solid #7e7e7e;
 
         .logo {
-            font-size: var(--font-size-title);
+            font-size: 24px;
             font-weight: bold;
             // text-transform: uppercase;
             text-transform: capitalize;
             text-decoration: none;
-            color: var(--secondary-color);
+            color: var(--primary-color);
 
             &:hover {
                 color: var(--text-color);
@@ -115,17 +118,39 @@ header {
 
         ul {
             display: flex;
-            gap: 0px 8px;
+            gap: 0px 14px;
 
             li {
+                &:hover {
+                    a::before {
+                        width: 100%;
+                        background-color: #0071dc;
+                        left: 0;
+                        right: auto;
+                    }
+                }
+
                 a {
+                    font-size: 18px;
                     text-decoration: none;
+                    position: relative;
                     color: var(--text-color);
 
                     &:hover {
-                        color: var(--secondary-color);
+                        color: var(--primary-color);
                     }
 
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: auto;
+                        right: 0;
+                        bottom: 0;
+                        height: 2px;
+                        width: 0;
+                        background: currentColor;
+                        transition: all .18s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    }
                 }
             }
         }
@@ -135,14 +160,19 @@ header {
 main {
     section {
         &.banner {
+            background: #f8f8f8;
+
             width: 100%;
-            height: 70vh;
+            height: 85vh;
             position: relative;
             overflow: hidden;
+            background-repeat: no-repeat;
+            background-image: url("../assets/pattern-curve.svg");
+            background-position: bottom left;
 
             .shape-wrapper {
                 position: absolute;
-                z-index: -5;
+                z-index: 0;
                 width: 100%;
                 height: 100%;
 
@@ -161,7 +191,7 @@ main {
                         top: auto;
                         left: auto;
                         right: 160px;
-                        bottom: 10%;
+                        bottom: 8%;
                     }
 
                     &.blob2 {
@@ -169,6 +199,12 @@ main {
                         right: auto;
                         left: 160px;
                         bottom: auto;
+                    }
+
+                    &.blob3 {
+                        top: auto;
+                        bottom: 30%;
+                        right: 20px;
                     }
                 }
             }
@@ -190,20 +226,90 @@ main {
                 width: 50%;
 
                 span {
-                    color: var(--secondary-color)
+                    color: var(--primary-color)
                 }
             }
 
-            img.banner-image01 {
+            img.banner-image01,
+            img.banner-image02,
+            img.banner-image03 {
                 position: absolute;
-                z-index: 0;
+                z-index: 10;
+
+                box-shadow: var(--shadow-default);
+            }
+
+            img.banner-image01 {
                 width: 12vw;
                 max-width: 12vw;
                 top: 38%;
                 left: 6%;
                 border-radius: 40px 10px 40px 10px;
-                box-shadow: var(--shadow-default);
+            }
 
+            img.banner-image02 {
+                width: 12vw;
+                max-width: 12vw;
+                top: 20%;
+                right: 6%;
+                border-radius: 40px 10px 40px 10px;
+            }
+
+            img.banner-image03 {
+                width: 12vw;
+                max-width: 12vw;
+                bottom: 3%;
+                left: 17%;
+                border-radius: 40px 10px 40px 10px;
+            }
+        }
+    }
+}
+
+.phases {
+    @include centerX();
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 18px 0px ;
+
+    .phase {
+        border: 1px solid #333;
+        color: #fff;
+        @include centerAll();
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 10px;
+        text-align: center;
+        transition: all .15s linear;
+        width: calc(40% - 10px);
+
+        * {
+            transition: inherit;
+            color: #898f9d;
+        }
+
+
+        .phase-title {
+            font-size: 28px;
+            color: var(--primary-color);
+        }
+
+        .icon {
+            font-size: 74px;
+        }
+
+        .phase-description {
+            font-size: 14px;
+        }
+
+        &:hover {
+            * {
+                color: var(--primary-color);
+            }
+
+            .phase-description {
+                color: #0f0e0d;
             }
         }
     }
