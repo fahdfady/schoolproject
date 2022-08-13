@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap");
+@import url("reset.css");
+/*==================== VARIABLES CSS ====================*/
+:root {
+  --main-color: #fff;
+  --primary-color: #FFB830;
+  --secondary-color-faded: rgba(139, 107, 209, 0.6);
+  --secondary-color: #3DB2FF;
+  --text-color: #000;
+  --bg-color: #f0f0f0;
+  --border-radius: 6px;
+  --shadow-default: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 0 5px 3px var(--secondary-color-faded);
+}
+
+::-moz-selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Font size for large devices */
+body {
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  text-transform: capitalize;
+  overflow-x: hidden;
+}
+
+.page-container {
+  position: relative;
+}
+
+header {
+  position: relative;
+  padding: 0px 10px;
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header a {
+  -webkit-transition: 0.15s all linear;
+  transition: 0.15s all linear;
+}
+
+header nav.navbar {
+  background: #f8f8f8;
+  width: 100%;
+  padding: 0px 20px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #7e7e7e;
+}
+
+header nav.navbar .logo {
+  font-size: var(--font-size-title);
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+header nav.navbar .logo:hover {
+  color: var(--text-color);
+}
+
+header nav.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0px 8px;
+}
+
+header nav.navbar ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+header nav.navbar ul li a:hover {
+  color: var(--secondary-color);
+}
+
+main section.banner {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+
+main section.banner .shape-wrapper {
+  position: absolute;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+}
+
+main section.banner .shape-wrapper img {
+  width: 200px;
+  height: unset;
+  position: absolute;
+  z-index: -1;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  display: block;
+}
+
+main section.banner .shape-wrapper img.blob1 {
+  top: auto;
+  left: auto;
+  right: 160px;
+  bottom: 10%;
+}
+
+main section.banner .shape-wrapper img.blob2 {
+  top: 10%;
+  right: auto;
+  left: 160px;
+  bottom: auto;
+}
+
+main section.banner .layer {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 100px;
+  font-weight: 800;
+}
+
+main section.banner .banner-title {
+  width: 50%;
+}
+
+main section.banner .banner-title span {
+  color: var(--secondary-color);
+}
+
+main section.banner img.banner-image01 {
+  position: absolute;
+  z-index: 0;
+  width: 12vw;
+  max-width: 12vw;
+  top: 38%;
+  left: 6%;
+  border-radius: 40px 10px 40px 10px;
+  -webkit-box-shadow: var(--shadow-default);
+          box-shadow: var(--shadow-default);
+}
+/*# sourceMappingURL=app.css.map */
