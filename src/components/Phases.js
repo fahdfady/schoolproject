@@ -5,7 +5,12 @@ const Phases = () => {
 
     return (
         <section className="phases">
-
+            <div className="section-title">
+                <h2>
+                    Welcome to the
+                    <span> e-learning platform </span>
+                </h2>
+            </div>
             <a href="#0" className="phase">
                 <div className="icon">
                     <i className="fa-solid fa-child-reaching"></i>

@@ -3,23 +3,27 @@ import blob2 from "../assets/blob2.svg"
 
 const Banner = () => {
 
-    const bannerImage = document.querySelectorAll(".shape-wrapper img.banner-image01");
+    const bannerImage = document.querySelectorAll(".shape-wrapper img");
 
-    // function eqwe() {
+    function eqwe() {
 
-    //     console.log(bannerImage[1])
-    //     console.log("worked");
+        console.log(bannerImage)
+        console.log("worked");
 
-    //     onmousemove = (MouseEvent) => {
-    //         console.log("worked");
+        onmousemove = (MouseEvent) => {
+            console.log("worked");
 
-    //         let x = MouseEvent.clientX;
-    //         let y = MouseEvent.clientY;
-    //         bannerImage[1].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
+            let x = MouseEvent.clientX;
+            let y = MouseEvent.clientY;
+            for (let i = 0; i < bannerImage.length; i++) {
+                bannerImage[0].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
+                bannerImage[1].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
+                bannerImage[2].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
+            };
 
-    //     }
+        }
 
-    // };
+    };
 
 
     return (
@@ -38,7 +42,7 @@ const Banner = () => {
 
                 <img src="https://htmldemo.net/edumall/edumall/assets/images/shape/edumall-shape-01.png" className="blob3" alt="blob" />
             </div>
-            {/* { bannerImage && eqwe() } */ }
+            { bannerImage && eqwe() }
             <div className="layer">
                 <h2 className="banner-title">
                     Learn Something <span> New </span> Today
