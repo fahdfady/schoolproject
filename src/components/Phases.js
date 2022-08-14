@@ -10,6 +10,10 @@ const Phases = () => {
                     Welcome to the
                     <span> e-learning platform </span>
                 </h2>
+
+                <p className="section-subtitle">
+                    choose the educational phase you want to explore 
+                </p>
             </div>
             <a href="#0" className="phase">
                 <div className="icon">

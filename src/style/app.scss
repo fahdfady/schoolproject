@@ -161,6 +161,8 @@ header {
 
 main {
     section {
+        margin: 28px 0px;
+
         &.banner {
             background: #f8f8f8;
 
@@ -168,6 +170,7 @@ main {
             height: 90vh;
             position: relative;
             overflow: hidden;
+            margin: 0px;
             background-repeat: no-repeat;
             background-image: url("../assets/pattern-curve.svg");
             background-position: bottom left;
@@ -198,7 +201,6 @@ main {
             img.banner-image03 {
                 position: absolute;
                 z-index: 10;
-
                 box-shadow: var(--shadow-default);
             }
 
@@ -248,15 +250,23 @@ main {
                     &:hover {
                         background: #fff;
                         box-shadow: var(--shadow-hover);
+
+                        .image-container {
+                            img {
+                                transform: scale(1.1);
+                            }
+                        }
                     }
 
                     .image-container {
                         width: 100%;
+                        overflow: hidden;
 
                         img {
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
+                            transition: .16s all linear;
                         }
                     }
 
@@ -277,13 +287,17 @@ main {
         }
     }
 
+    .register {
+        @include centerX();
+    }
+
     .register-wrap {
         position: relative;
         background: #f8f8f8;
         border-radius: 10px;
         padding: 38px;
-        margin: 20px auto;
-        width: 55%;
+        margin: 20px 0px;
+        width: 720px;
         box-shadow: var(--shadow-default);
         overflow: hidden;
 
@@ -569,7 +583,7 @@ main {
         &.blob1 {
             top: auto;
             left: auto;
-            right: 160px;
+            right: 200px;
             bottom: 8%;
         }
 
@@ -581,9 +595,10 @@ main {
         }
 
         &.blob3 {
-            top: auto;
-            bottom: 30%;
-            right: 20px;
+            top: 10%;
+            bottom: auto;
+            left: auto;
+            right: 280px;
         }
     }
 }
@@ -592,7 +607,7 @@ main {
     @include centerX();
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 22px;
+    gap: 28px;
     padding: 18px 0px;
 
     .phase {
@@ -637,4 +652,56 @@ main {
             }
         }
     }
+}
+
+.faq-container {
+    width: 800px;
+    margin: 40px auto;
+
+    .qa-wrapper {
+        background: transparent;
+        border-bottom: 1px #acaaaa solid;
+        border-radius: 2px;
+        margin-bottom: 5px;
+        font-weight: 300;
+        text-align: start;
+
+        .question {
+            display: block;
+            width: 100%;
+            padding: 15px 5px;
+            font-size: 18px;
+            text-align: start;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            gap: 6px;
+
+            h2 {
+                font-weight: 300;
+                color: var(--secondary-color);
+            }
+
+            &:hover {
+                h2 {
+                    color: #000;
+                    transition: .5s all ease-in-out;
+                }
+            }
+        }
+
+        .answer {
+            opacity: 0;
+            height: 0px;
+            color: #000000b5;
+            transition: .1s all ease-in-out;
+
+            &.show {
+                padding: 16px;
+                opacity: 1;
+                height: fit-content;
+            }
+        }
+    }
+
 }

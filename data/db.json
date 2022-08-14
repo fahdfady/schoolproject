@@ -35,5 +35,27 @@
             "image": "https://htmldemo.net/edumall/edumall/assets/images/event/event-thumbnail-09.jpg",
             "location": "cairo"
         }
+    ],
+    "faqs": [
+        {
+            "id": 1,
+            "q": "how to study history subject",
+            "a": "You will select the part of the lesson you want to study: Consolidating Muhammad Ali's authority."
+        },
+        {
+            "id": 2,
+            "q": "how to study history subject",
+            "a": "You will select the part of the lesson you want to study: Consolidating Muhammad Ali's authority."
+        },
+        {
+            "id": 3,
+            "q": "how to study history subject",
+            "a": "You will select the part of the lesson you want to study: Consolidating Muhammad Ali's authority."
+        },
+        {
+            "id": 4,
+            "q": "how to study history subject",
+            "a": "You will select the part of the lesson you want to study: Consolidating Muhammad Ali's authority."
+        }
     ]
 }

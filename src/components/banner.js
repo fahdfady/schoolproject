@@ -15,11 +15,16 @@ const Banner = () => {
 
             let x = MouseEvent.clientX;
             let y = MouseEvent.clientY;
+
+            let x2 = - MouseEvent.clientX
+            let y2 = -MouseEvent.clientY;
+
             for (let i = 0; i < bannerImage.length; i++) {
-                bannerImage[0].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
-                bannerImage[1].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
-                bannerImage[2].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
             };
+            bannerImage[0].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
+            bannerImage[1].style.transform = "translate3d(" + x / 10 + 'px,' + y / 10 + 'px, 0px)';
+            bannerImage[2].style.transform = "translate3d(" + x2 / 10 + 'px,' + y / 10 + 'px, 0px)';
+
 
         }
 

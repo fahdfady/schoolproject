@@ -157,12 +157,17 @@ header nav.navbar ul li a::before {
   transition: all 0.18s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+main section {
+  margin: 28px 0px;
+}
+
 main section.banner {
   background: #f8f8f8;
   width: 100%;
   height: 90vh;
   position: relative;
   overflow: hidden;
+  margin: 0px;
   background-repeat: no-repeat;
   background-image: url("../assets/pattern-curve.svg");
   background-position: bottom left;
@@ -262,8 +267,14 @@ main section.events .swiper .card:hover {
           box-shadow: var(--shadow-hover);
 }
 
+main section.events .swiper .card:hover .image-container img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 main section.events .swiper .card .image-container {
   width: 100%;
+  overflow: hidden;
 }
 
 main section.events .swiper .card .image-container img {
@@ -271,6 +282,8 @@ main section.events .swiper .card .image-container img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: .16s all linear;
+  transition: .16s all linear;
 }
 
 main section.events .swiper .card .event-name {
@@ -288,13 +301,22 @@ main section.events .swiper .card .location {
   font-size: 18px;
 }
 
+main .register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 main .register-wrap {
   position: relative;
   background: #f8f8f8;
   border-radius: 10px;
   padding: 38px;
-  margin: 20px auto;
-  width: 55%;
+  margin: 20px 0px;
+  width: 720px;
   -webkit-box-shadow: var(--shadow-default);
           box-shadow: var(--shadow-default);
   overflow: hidden;
@@ -626,7 +648,7 @@ main .register-wrap .section-title h2::before {
 .shape-wrapper img.blob1 {
   top: auto;
   left: auto;
-  right: 160px;
+  right: 200px;
   bottom: 8%;
 }
 
@@ -638,9 +660,10 @@ main .register-wrap .section-title h2::before {
 }
 
 .shape-wrapper img.blob3 {
-  top: auto;
-  bottom: 30%;
-  right: 20px;
+  top: 10%;
+  bottom: auto;
+  left: auto;
+  right: 280px;
 }
 
 .phases {
@@ -656,7 +679,7 @@ main .register-wrap .section-title h2::before {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 22px;
+  gap: 28px;
   padding: 18px 0px;
 }
 
@@ -713,5 +736,60 @@ main .register-wrap .section-title h2::before {
 
 .phases .phase:hover .phase-description {
   color: #0f0e0d;
+}
+
+.faq-container {
+  width: 800px;
+  margin: 40px auto;
+}
+
+.faq-container .qa-wrapper {
+  background: transparent;
+  border-bottom: 1px #acaaaa solid;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  text-align: start;
+}
+
+.faq-container .qa-wrapper .question {
+  display: block;
+  width: 100%;
+  padding: 15px 5px;
+  font-size: 18px;
+  text-align: start;
+  cursor: pointer;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+}
+
+.faq-container .qa-wrapper .question h2 {
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.faq-container .qa-wrapper .question:hover h2 {
+  color: #000;
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+}
+
+.faq-container .qa-wrapper .answer {
+  opacity: 0;
+  height: 0px;
+  color: #000000b5;
+  -webkit-transition: .1s all ease-in-out;
+  transition: .1s all ease-in-out;
+}
+
+.faq-container .qa-wrapper .answer.show {
+  padding: 16px;
+  opacity: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 /*# sourceMappingURL=app.css.map */
