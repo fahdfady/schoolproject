@@ -210,10 +210,7 @@ main section.banner .banner-title span {
   color: var(--primary-color);
 }
 
-main section.banner img.banner-image01,
-main section.banner img.banner-image02,
-main section.banner img.banner-image03,
-main section.banner img.banner-image04 {
+main section.banner img.banner-image {
   position: absolute;
   z-index: 10;
   -webkit-box-shadow: var(--shadow-default);
@@ -252,6 +249,165 @@ main section.banner img.banner-image04 {
   border-radius: 40px 10px 40px 10px;
 }
 
+main section.phases .phases-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 28px;
+  padding: 18px 0px;
+}
+
+main section.phases .phase {
+  border: 1px solid #9a9999;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  padding: 20px 10px;
+  text-align: center;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+  width: calc(50% - 24px);
+}
+
+main section.phases .phase * {
+  -webkit-transition: inherit;
+  transition: inherit;
+  color: var(--disabled-text);
+}
+
+main section.phases .phase .phase-title {
+  font-size: 28px;
+  color: var(--primary-color);
+}
+
+main section.phases .phase .icon {
+  font-size: 74px;
+}
+
+main section.phases .phase .phase-description {
+  font-size: 16px;
+}
+
+main section.phases .phase:hover {
+  border-color: var(--primary-color);
+}
+
+main section.phases .phase:hover * {
+  color: var(--primary-color);
+}
+
+main section.phases .phase:hover .phase-description {
+  color: #0f0e0d;
+}
+
+main section.services {
+  background: #eff5f7;
+}
+
+main section.services .shape-wrapper img.blob1 {
+  top: auto;
+  left: auto;
+  right: -50px;
+  bottom: -20px;
+}
+
+main section.services .shape-wrapper img.blob2 {
+  top: -70px;
+  right: auto;
+  left: 100px;
+  bottom: auto;
+}
+
+main section.services .services-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px 12px;
+  margin-top: 28px;
+  position: relative;
+  z-index: 5;
+}
+
+main section.services .service {
+  width: calc(33% - 6px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+main section.services .service .service-icon {
+  display: inline-block;
+  position: relative;
+  font-size: 80px;
+  color: var(--primary-color);
+  line-height: 50px;
+}
+
+main section.services .service .service-icon::before {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  content: "";
+  background: #e9ecf4;
+  right: -15px;
+  top: 12px;
+  z-index: -1;
+}
+
+main section.services .service .service-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+main section.services .service p {
+  color: var(--disabled-text);
+  min-height: 50px;
+  padding: 0 15px;
+}
+
 main section.events .swiper {
   width: 75%;
   padding: 26px;
@@ -270,7 +426,7 @@ main section.events .swiper .card {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  width: 300px;
+  width: 280px;
   height: 380px;
   background: #f8f8f8;
   -webkit-box-shadow: var(--shadow-default);
@@ -317,91 +473,6 @@ main section.events .swiper .card .location {
   display: flex;
   gap: 6px;
   font-size: 18px;
-}
-
-main section.services {
-  background: #eff5f7;
-}
-
-main section.services .shape-wrapper img.blob1 {
-  top: auto;
-  left: auto;
-  right: -50px;
-  bottom: -20px;
-}
-
-main section.services .shape-wrapper img.blob2 {
-  top: -70px;
-  right: auto;
-  left: 100px;
-  bottom: auto;
-}
-
-main section.services .services-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 24px 12px;
-  margin-top: 28px;
-}
-
-main section.services .service {
-  width: calc(33% - 6px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 12px;
-  text-align: center;
-}
-
-main section.services .service .service-icon {
-  display: inline-block;
-  position: relative;
-  font-size: 80px;
-  color: var(--primary-color);
-  line-height: 50px;
-}
-
-main section.services .service .service-icon::before {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  content: "";
-  background: #eef1f9;
-  right: -15px;
-  top: 12px;
-  z-index: -1;
-}
-
-main section.services .service .service-title {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
-main section.services .service p {
-  color: var(--disabled-text);
-  min-height: 50px;
-  padding: 0 15px;
 }
 
 main .register {
@@ -686,6 +757,7 @@ main .register-wrap .section-title h2::before {
           flex-direction: column;
   padding: 10px;
   text-align: center;
+  position: relative;
 }
 
 .section-title h2 {
@@ -787,78 +859,6 @@ main .register-wrap .section-title h2::before {
   height: 500px;
 }
 
-.phases {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 28px;
-  padding: 18px 0px;
-}
-
-.phases .phase {
-  border: 1px solid #9a9999;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 12px;
-  padding: 20px 10px;
-  text-align: center;
-  -webkit-transition: all .15s linear;
-  transition: all .15s linear;
-  width: calc(50% - 24px);
-}
-
-.phases .phase * {
-  -webkit-transition: inherit;
-  transition: inherit;
-  color: var(--disabled-text);
-}
-
-.phases .phase .phase-title {
-  font-size: 28px;
-  color: var(--primary-color);
-}
-
-.phases .phase .icon {
-  font-size: 74px;
-}
-
-.phases .phase .phase-description {
-  font-size: 14px;
-}
-
-.phases .phase:hover {
-  border-color: var(--primary-color);
-}
-
-.phases .phase:hover * {
-  color: var(--primary-color);
-}
-
-.phases .phase:hover .phase-description {
-  color: #0f0e0d;
-}
-
 .faq-container {
   width: 800px;
   margin: 40px auto;
@@ -939,5 +939,207 @@ footer.page-footer .copyright-wrapper {
 
 footer.page-footer .copyright-wrapper a {
   color: var(--secondary-color);
+}
+
+@media (max-width: 1200px) {
+  main section.banner .layer {
+    font-size: 78px;
+  }
+  main section.events .swiper .card {
+    width: 220px;
+    height: 330px;
+  }
+  main section.events .swiper .card .event-name {
+    padding: 0;
+    font-size: 22px;
+  }
+  main .shape-wrapper .circle.blob4 {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  main section.banner .banner-title {
+    width: 55%;
+  }
+  main section.banner .layer {
+    font-size: 60px;
+  }
+  main section.events .swiper .card {
+    width: 160px;
+    height: 270px;
+  }
+  main section.events .swiper .card .event-name {
+    font-size: 18px;
+  }
+  main section.events .swiper .card .date {
+    font-size: 14px;
+  }
+  main .register-wrap {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  main section.banner img.banner-image {
+    width: 140px;
+    max-width: 140px;
+  }
+  main section.banner img.banner-image04 {
+    bottom: 3%;
+    right: 10%;
+  }
+  main section.phases .phase p.phase-description {
+    font-size: 14px;
+  }
+  main section.services .service p {
+    font-size: 14px;
+  }
+  main section.events .swiper .card {
+    width: 140px;
+    height: 270px;
+  }
+  main section.events .swiper .card .event-name {
+    font-size: 16px;
+  }
+  main section.events .swiper .card .date {
+    font-size: 12px;
+  }
+  .section-title h2 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  main section.banner .banner-title {
+    width: 100%;
+  }
+  main section.banner img.banner-image {
+    width: 110px;
+    max-width: 110px;
+  }
+  main section.banner img.banner-image01 {
+    top: 13%;
+  }
+  main section.phases .phase .icon {
+    font-size: 64px;
+  }
+  main section.phases .phase .phase-title {
+    font-size: 26px;
+  }
+  main section.services {
+    padding: 0px;
+  }
+  main section.services .services-container {
+    gap: 10px 10px;
+  }
+  main section.services .shape-wrapper img.blob1 {
+    right: -50px;
+    bottom: -50px;
+  }
+  main section.services .shape-wrapper img.blob2 {
+    left: 10px;
+  }
+  main section.services .service {
+    width: calc(50% - 12px);
+  }
+  main section.services .service p {
+    padding: 0;
+    min-height: 80px;
+  }
+  main section.events .swiper {
+    padding: 20px;
+  }
+  main section.events .swiper .card {
+    width: 120px;
+    height: 250px;
+  }
+  main section.events .swiper .card .event-name {
+    font-size: 16px;
+  }
+  main section.events .swiper .card .date {
+    font-size: 12px;
+  }
+  main .section-title h2 {
+    font-size: 36px;
+  }
+  main .section-title h2::before {
+    height: 4px;
+  }
+  main .shape-wrapper img {
+    width: 130px;
+  }
+}
+
+@media (max-width: 430px) {
+  main section.phases .phases-container {
+    gap: 10px;
+  }
+  main section.phases .phase {
+    width: calc(50% - 14px);
+  }
+  main section.phases .phase .icon {
+    font-size: 56px;
+  }
+  main section.phases .phase .phase-title {
+    font-size: 22px;
+  }
+  main section.phases .phase p.phase-description {
+    font-size: 12px;
+  }
+  main section.services .service .service-icon {
+    font-size: 64px;
+  }
+  main section.services .service p {
+    font-size: 12px;
+    min-height: 130px;
+  }
+  main section.events .swiper {
+    padding: 4px;
+  }
+  main section.events .swiper .card {
+    width: 90px;
+    height: 190px;
+  }
+  main section.events .swiper .card .event-name {
+    font-size: 14px;
+  }
+  main section.events .swiper .card .date {
+    font-size: 10px;
+  }
+  main section.events .swiper .card .location {
+    font-size: 12px;
+  }
+  main .register-wrap form .form-group.two-inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  main .register-wrap form .form-group.two-inputs .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  main section.events .swiper {
+    padding: 4px;
+  }
+  main section.events .swiper .card {
+    width: 80px;
+    height: 200px;
+  }
+  main section.events .swiper .card .event-name {
+    font-size: 12px;
+    padding: 1px;
+  }
+  main section.events .swiper .card .date {
+    font-size: 8px;
+  }
+  main section.events .swiper .card .location {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=app.css.map */

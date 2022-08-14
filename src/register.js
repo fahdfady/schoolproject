@@ -3,7 +3,7 @@ import RegForm from "./components/regform";
 const Register = () => {
     return (
         <div className="register">
-            <div className="register-wrap col-9 col-md-7 col-lg-5">
+            <div className="register-wrap col-11 col-md-7 col-lg-5">
 
                 <div className="shape-wrapper">
                     <img src="https://htmldemo.net/edumall/edumall/assets/images/shape/edumall-shape-01.png" className="blob1" alt="blob" />

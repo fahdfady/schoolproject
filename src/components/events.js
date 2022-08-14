@@ -17,7 +17,7 @@ const Events = ({ events }) => {
                 </p>
             </div>
             <Swiper
-                spaceBetween={ 50 }
+                spaceBetween={ 40 }
                 slidesPerView={ 3 }
             >
                 { events.map((event) => (

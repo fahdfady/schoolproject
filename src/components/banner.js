@@ -30,13 +30,13 @@ const Banner = () => {
     return (
         <section className="banner">
 
-            <img src="https://i.ibb.co/hYZvJkN/cdc-GDok-EYn-Ofn-E-unsplash-1.jpg" alt="boy" className="banner-image01" />
+            <img src="https://i.ibb.co/hYZvJkN/cdc-GDok-EYn-Ofn-E-unsplash-1.jpg" alt="boy" className="banner-image banner-image01" />
 
-            <img src="https://i.ibb.co/2kVh2TB/jerry-wang-jfn-UC7s3iuw-unsplash-1.jpg" alt="girl" className="banner-image02" />
+            <img src="https://i.ibb.co/2kVh2TB/jerry-wang-jfn-UC7s3iuw-unsplash-1.jpg" alt="girl" className="banner-image banner-image02" />
 
-            <img src="https://i.ibb.co/S08m4Bj/andrea-buccelli-Aq-Fetk-Kj-CC8-unsp.jpg" alt="girl" className="banner-image03" />
+            <img src="https://i.ibb.co/S08m4Bj/andrea-buccelli-Aq-Fetk-Kj-CC8-unsp.jpg" alt="girl" className="banner-image banner-image03" />
 
-            <img src="https://i.ibb.co/bFCM6ZG/ben-white-q-DY9ahp0-Mto-unsplash-1.jpg" alt="boy" className="banner-image04" />
+            <img src="https://i.ibb.co/bFCM6ZG/ben-white-q-DY9ahp0-Mto-unsplash-1.jpg" alt="boy" className="banner-image banner-image04" />
 
             <div className="shape-wrapper">
                 <img src={ blob } className="blob1" alt="blob" />
