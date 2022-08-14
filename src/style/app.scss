@@ -1060,10 +1060,11 @@ footer.page-footer {
             }
         }
 
-        .shape-wrapper {
-            img {
-                width: 130px;
-            }
+    }
+
+    .shape-wrapper {
+        img {
+            width: 130px;
         }
     }
 }
@@ -1071,6 +1072,19 @@ footer.page-footer {
 @media (max-width:430px) {
     main {
         section {
+            &.banner {
+                img {
+                    &.banner-image {
+                        width: 90px;
+                        max-width: 90px;
+                    }
+                }
+
+                .layer {
+                    font-size: 36px;
+                }
+            }
+
             &.phases {
                 .phases-container {
                     gap: 10px;
@@ -1102,6 +1116,19 @@ footer.page-footer {
                     p {
                         font-size: 12px;
                         min-height: 130px;
+                    }
+                }
+
+                .shape-wrapper {
+                    img {
+                        &.blob1 {
+                            right: -40px;
+                            bottom: -30px;
+                        }
+
+                        &.blob2 {
+                            top: -60px;
+                        }
                     }
                 }
             }
@@ -1141,6 +1168,12 @@ footer.page-footer {
                     }
                 }
             }
+        }
+    }
+
+    .shape-wrapper {
+        img {
+            width: 100px;
         }
     }
 }

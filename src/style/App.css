@@ -1067,12 +1067,19 @@ footer.page-footer .copyright-wrapper a {
   main .section-title h2::before {
     height: 4px;
   }
-  main .shape-wrapper img {
+  .shape-wrapper img {
     width: 130px;
   }
 }
 
 @media (max-width: 430px) {
+  main section.banner img.banner-image {
+    width: 90px;
+    max-width: 90px;
+  }
+  main section.banner .layer {
+    font-size: 36px;
+  }
   main section.phases .phases-container {
     gap: 10px;
   }
@@ -1094,6 +1101,13 @@ footer.page-footer .copyright-wrapper a {
   main section.services .service p {
     font-size: 12px;
     min-height: 130px;
+  }
+  main section.services .shape-wrapper img.blob1 {
+    right: -40px;
+    bottom: -30px;
+  }
+  main section.services .shape-wrapper img.blob2 {
+    top: -60px;
   }
   main section.events .swiper {
     padding: 4px;
@@ -1120,6 +1134,9 @@ footer.page-footer .copyright-wrapper a {
   }
   main .register-wrap form .form-group.two-inputs .text {
     width: 100%;
+  }
+  .shape-wrapper img {
+    width: 100px;
   }
 }
 
