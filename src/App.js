@@ -12,6 +12,9 @@ import {
 import FAQ from "./faq";
 
 import ReactWOW from 'react-wow'
+import Footer from "./components/footer";
+
+
 function App() {
 
   return (
@@ -29,14 +32,14 @@ function App() {
                 <Route path="/" element={ <Home /> } />
 
                 <Route path="/register" element={ <Register /> } />
-  
+
                 <Route path="/faq" element={ <FAQ /> } />
 
               </Routes>
             </main>
           </div>
 
-          <footer className="page-footer"></footer>
+          <Footer />
         </div>
       </div >
     </BrowserRouter>

@@ -35,7 +35,7 @@ const Events = ({ events }) => {
                             </a>
 
                             <p className="location">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i className="fa-solid fa-location-dot"></i>
                                 { event.location }
                             </p>
                         </div>

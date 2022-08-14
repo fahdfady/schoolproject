@@ -4,7 +4,7 @@ const Phases = () => {
 
 
     return (
-        <section className="phases">
+        <section className="phases container">
             <div className="section-title">
                 <h2>
                     Welcome to the

@@ -57,5 +57,31 @@
             "q": "how to study history subject",
             "a": "You will select the part of the lesson you want to study: Consolidating Muhammad Ali's authority."
         }
+    ],
+    "services": [
+        {
+            "id": 1,
+            "title": "top teachers",
+            "description": "Learn from the best experts of the subjects, we've got some of the best teachers in the country ",
+            "icon": "fa-solid fa-chalkboard-user"
+        },
+        {
+            "id": 2,
+            "title": "absolutly free",
+            "description": "the platform is completly free to use. you can acsses any of the content we provide anytime for free without any limitations ",
+            "icon": "fa-solid fa-sack-dollar"
+        },
+        {
+            "id": 3,
+            "title": "we got all what you need",
+            "description": "you can choose any resource to study from, we've got a very large database full of the best study material that you can learn from",
+            "icon": "fa-solid fa-database"
+        },
+        {
+            "id": 4,
+            "title": "you are safe",
+            "description": "we use the most powerful encyrption technologies to make sure we provide you the safest experience",
+            "icon": "fa-solid fa-file-shield"
+        }
     ]
 }
