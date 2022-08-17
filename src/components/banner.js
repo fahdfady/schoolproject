@@ -49,14 +49,15 @@ const Banner = () => {
 
                 <img src="https://htmldemo.net/edumall/edumall/assets/images/shape/edumall-shape-01.png" className="blob5" alt="blob" />
 
-            </div>
+            </div> 
+            
             { bannerImage && eqwe() }
             <div className="layer">
                 <h2 className="banner-title">
                     Learn Something <span> New </span> Today
                 </h2>
             </div>
-
+   
             {/* { eqwe() } */ }
 
         </section>

@@ -2,6 +2,7 @@ const Services = ({ services }) => {
     return (
         <section className="services">
             <div className="shape-wrapper">
+                
                 <img src="https://htmldemo.net/edumall/edumall/assets/images/shape/edumall-shape-01.png" className="blob1" alt="blob" />
                 <img src="https://htmldemo.net/edumall/edumall/assets/images/shape/edumall-shape-01.png" className="blob2" alt="blob" />
 

@@ -13,6 +13,8 @@ import FAQ from "./faq";
 
 import ReactWOW from 'react-wow'
 import Footer from "./components/footer";
+import About from "./about";
+import Presentation from "./presentation";
 
 
 function App() {
@@ -31,9 +33,13 @@ function App() {
 
                 <Route path="/" element={ <Home /> } />
 
-                <Route path="/register" element={ <Register /> } />
+                <Route path="/about" element={ <About /> } />
+
+                <Route path="/presentation" element={ <Presentation /> } />
 
                 <Route path="/faq" element={ <FAQ /> } />
+
+                <Route path="/register" element={ <Register /> } />
 
               </Routes>
             </main>

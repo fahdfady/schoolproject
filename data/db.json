@@ -83,5 +83,37 @@
             "description": "we use the most powerful encyrption technologies to make sure we provide you the safest experience",
             "icon": "fa-solid fa-file-shield"
         }
+    ],
+    "blogs": [
+        {
+            "id": 1,
+            "title": "digital transformation",
+            "content": "The Ministry of Communications and Information Technology seeks to build a digital Egypt and reach an Egyptian society that deals digitally in all aspects of life. Therefore, it works to promote the development of information and communication technology infrastructure and improve digital services in government agencies, in order to improve the performance of ministries and other government agencies, raise the quality and efficiency of services by improving the work environment, provide support for the decision-making process and find solutions to issues of concern to society.",
+            "image": "https://i.ibb.co/KXF5Dfv/photo-1592383010275-b028451b2947.webp"
+        },
+        {
+            "id": 2,
+            "title": "digital transformation",
+            "content": "The Ministry of Communications and Information Technology seeks to build a digital Egypt and reach an Egyptian society that deals digitally in all aspects of life. Therefore, it works to promote the development of information and communication technology infrastructure and improve digital services in government agencies, in order to improve the performance of ministries and other government agencies, raise the quality and efficiency of services by improving the work environment, provide support for the decision-making process and find solutions to issues of concern to society.",
+            "image": "https://i.ibb.co/KXF5Dfv/photo-1592383010275-b028451b2947.webp"
+        },
+        {
+            "id": 3,
+            "title": "digital transformation",
+            "content": "The Ministry of Communications and Information Technology seeks to build a digital Egypt and reach an Egyptian society that deals digitally in all aspects of life. Therefore, it works to promote the development of information and communication technology infrastructure and improve digital services in government agencies, in order to improve the performance of ministries and other government agencies, raise the quality and efficiency of services by improving the work environment, provide support for the decision-making process and find solutions to issues of concern to society.",
+            "image": "https://i.ibb.co/KXF5Dfv/photo-1592383010275-b028451b2947.webp"
+        },
+        {
+            "id": 4,
+            "title": "digital transformation",
+            "content": "The Ministry of Communications and Information Technology seeks to build a digital Egypt and reach an Egyptian society that deals digitally in all aspects of life. Therefore, it works to promote the development of information and communication technology infrastructure and improve digital services in government agencies, in order to improve the performance of ministries and other government agencies, raise the quality and efficiency of services by improving the work environment, provide support for the decision-making process and find solutions to issues of concern to society.",
+            "image": "https://i.ibb.co/KXF5Dfv/photo-1592383010275-b028451b2947.webp"
+        },
+        {
+            "id": 5,
+            "title": "digital transformation",
+            "content": "The Ministry of Communications and Information Technology seeks to build a digital Egypt and reach an Egyptian society that deals digitally in all aspects of life. Therefore, it works to promote the development of information and communication technology infrastructure and improve digital services in government agencies, in order to improve the performance of ministries and other government agencies, raise the quality and efficiency of services by improving the work environment, provide support for the decision-making process and find solutions to issues of concern to society.",
+            "image": "https://i.ibb.co/KXF5Dfv/photo-1592383010275-b028451b2947.webp"
+        }
     ]
 }
