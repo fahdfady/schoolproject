@@ -1,18 +1,21 @@
 const FAQS = ({ faqs }) => {
 
     function qwe() {
-        const question = document.querySelector(".question");
+        const question = document.querySelectorAll(".question");
 
-        const answer = document.querySelector(".answer");
-
-        answer.classList.toggle("show");
+        const answer = document.querySelectorAll(".answer");
+        for (let i = 0; i < answer.length; i++) {
+            question[i].onclick = function () {
+                answer[i].classList.toggle("show");
+            };
+        };
     }
 
     return (
-        <div className="faq-container">
+        <div className="faq-container container">
             { faqs.map((faq) => (
                 <div className="qa-wrapper" key={ faq.id }>
-                    <a className="question" onClick={ qwe }>
+                    <a className="question">
                         { faq.q }
                         <i className="fa-solid fa-caret-down"></i>
                     </a>
@@ -23,6 +26,7 @@ const FAQS = ({ faqs }) => {
                     </div>
                 </div>
             )) }
+            { qwe() }
         </div>
     )
 }
